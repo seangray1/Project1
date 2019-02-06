@@ -1,0 +1,12 @@
+<apex:page controller="newcaseffff">
+    <apex:form >
+    <apex:pageBlock title="cases" id="case_list">
+        
+       <apex:repeat >
+        
+        </apex:repeat>
+    
+    
+    </apex:pageBlock>
+        </apex:form>
+</apex:page>

@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="item" type="Boolean" default="true"/>
+	<lightning:button label="Packed!" 
+                      
+                      
+                      onClick="{!c.packItem}"/>
+                      
+</aura:component>

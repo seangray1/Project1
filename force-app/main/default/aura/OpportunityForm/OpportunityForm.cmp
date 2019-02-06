@@ -1,0 +1,19 @@
+<aura:component implements="lightning:actionOverride,force:hasRecordId,force:hasSObjectName,force:appHostable">
+    <aura:attribute name='newOpp' type='Opportunity' default="{'sObject':'Opportunity', 'Name':'Default', 'CloseDate':''}"/>
+    <aura:registerEvent name="addOpp" type="c:OpportunityFormEvent" />
+   
+    <form>
+    
+    <lightning:input aura:id="opps" label="Opportunity Name" name="Name" value="{!v.newOpp.Name}"/>
+    
+    <lightning:input aura:id="opps" label="Close Date" type="date" name="CloseDate" value="{!v.newOpp.CloseDate}"/>
+    
+    
+    
+     <lightning:button label="New Opportunity"
+                       onclick="{!c.clickCreateOpp}"/>
+    
+    
+    </form>
+	
+</aura:component>

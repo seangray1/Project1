@@ -1,0 +1,22 @@
+<aura:component controller="leagueController" implements ="force:appHostable">
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/> 
+    <aura:handler name="champion" event="c:addItem" action="{!c.createChampion}"/>
+    
+    
+    <c:leagueChampionForm/>
+    
+    
+    <aura:attribute name="championList" type="Lol__c[]"/>
+    
+    <p> hello </p> <h1> title </h1>
+    
+    
+    
+    
+    
+    <p>
+    <aura:iteration items="{!v.championList}" var="froppy">
+    <c:LeagueList champions = "{!froppy}"/>
+    </aura:iteration>
+    </p>
+</aura:component>

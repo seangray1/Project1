@@ -1,0 +1,22 @@
+<aura:component implements="force:appHostable">
+    
+	<aura:attribute name='newChampion' type='Lol__c' default="{'sObject':'Lol__c', 'Name':'', 'Health__c':'0', 'Type__c':''}"/>
+    <aura:registerEvent name="champion" type="c:addItem" />
+   
+    <form>
+    
+    <lightning:input aura:id="champions" label="Champion Name" name="Name" value="{!v.newChampion.Name}"/>
+    
+    <lightning:input aura:id="champions" label="HP" type="number" name="HealthPoints" value="{!v.newChampion.Health__c}"/>
+    
+    <lightning:input aura:id="champions" label="Type" name="championType" value="{!v.newChampion.Type__c}"/>
+    
+    
+     <lightning:button label="Click to Create a New Champion!"
+                       onclick="{!c.clickCreateChampion}"/>
+    
+    
+    </form>
+    
+    
+</aura:component>

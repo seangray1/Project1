@@ -1,0 +1,15 @@
+<aura:component >
+    
+    <aura:attribute name='champions' type='Lol__c'/>
+    
+    
+     Name: <lightning:card title="{!v.champions.Name}" iconName="standard:scan_card"
+                    class='slds-theme--success'>			
+    <p class="slds-text-heading--medium slds-p-horizontal--small"> 
+        
+    Health:  <lightning:formattednumber value="{!v.champions.Health__c}"/> </p>
+   <!-- <p>	<lighting:card Title="{!v.champions.Type__c}"/>				</p>-->
+   
+</lightning:card>	
+    
+</aura:component>

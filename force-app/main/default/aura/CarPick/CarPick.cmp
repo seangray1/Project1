@@ -1,0 +1,20 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" controller="MultiSelectController">
+    
+    <ui:button label="Fetch" press="{!c.fetch}"/>
+    <br/><br/>
+    <aura:attribute name="showBool" type="Boolean" default="false"/>
+    <aura:attribute name="customers" type="List" />
+    <form>
+   
+    <aura:renderIf isTrue="{!v.showBool}">
+        <lightning:card title="Cars">
+        <p class="slds-p-horizontal--small">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+               <aura:iteration items="{!v.customers}" var="cus" indexVar="key">
+                   <lightning:layout verticalAlign ="space"> <lightning:layoutItem flexibility="auto" padding="around-small">    {!cus.key} -------> {!cus.value} </lightning:layoutItem></lightning:layout>
+            </aura:iteration> 
+            </table></p></lightning:card>
+        
+    </aura:renderIf>  
+    </form>
+</aura:component>

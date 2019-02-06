@@ -1,0 +1,26 @@
+<aura:component controller="CampingListController" implements = "force:appHostable">
+    
+     <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:handler name="addItem" event="c:addItemEvent" action="{!c.handleAddItem}"/>
+    
+    
+
+    
+    <c:campingHeader/>
+    
+    <c:campingListForm/>  
+    
+    <aura:attribute name="items" type="Camping_Item__c[]"/>
+   
+<c:campingHeader/>
+   
+   
+   
+    
+    <aura:iteration items="{!v.items}" var = "froppy">
+        <c:campingListItem item="{!froppy}"/>
+    </aura:iteration>  
+    
+
+	
+</aura:component>
